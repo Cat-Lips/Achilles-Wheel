@@ -1,0 +1,21 @@
+﻿<Project Sdk="Godot.NET.Sdk/4.3.0-dev.1">
+  <PropertyGroup>
+    <LangVersion>preview</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <TargetFramework>net8.0</TargetFramework>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="**/*.gd" />
+    <Content Include="**/*.tscn" />
+    <Content Include="**/*.tres" />
+    <Content Include="**/*.glsl" />
+    <Content Include="**/*.gdshader" />
+    <Content Include="**/*.gdshaderinc" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AsyncAwaitBestPractices" Version="7.0.0" />
+    <PackageReference Include="FastEnum" Version="1.8.0" />
+    <PackageReference Include="GodotSharp.SourceGenerators" Version="2.3.2" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://nph02o2j511h"]
+
+[ext_resource type="Script" path="res://addons/GodotSharp.BuildingBlocks/Features/Terrain2/Terrain.cs" id="1_i2h0e"]
+[ext_resource type="Script" path="res://addons/GodotSharp.BuildingBlocks/Features/Terrain2/fnl/ShaderNoiseLite.cs" id="2_ipbcx"]
+[ext_resource type="Script" path="res://addons/GodotSharp.BuildingBlocks/Features/Terrain2/Config/TerrainData.cs" id="3_q6s4x"]
+
+[sub_resource type="Resource" id="Resource_8haxy"]
+script = ExtResource("2_ipbcx")
+NoiseType = 0
+Seed = 0
+Frequency = 0.01
+FractalType = 0
+Octaves = 3
+Lacunarity = 2.0
+Gain = 0.5
+WeightedStrength = 0.0
+PingPongStrength = 2.0
+
+[sub_resource type="Resource" id="Resource_5in26"]
+script = ExtResource("3_q6s4x")
+Noise = SubResource("Resource_8haxy")
+Amplitude = 100.0
+Offset = Vector2(0, 0)
+Regions = []
+EnableBlending = true
+UseHeightCurve = true
+LodStep = 1
+ChunkSize = 512
+ChunkRadius = 10
+ChunkScale = 1.0
+DefaultSize = 8
+
+[node name="Terrain" type="Node" node_paths=PackedStringArray("Colliders")]
+script = ExtResource("1_i2h0e")
+Config = SubResource("Resource_5in26")
+Colliders = []
+
+[node name="Mesh" type="Node3D" parent="."]
+unique_name_in_owner = true
+
+[node name="Body" type="StaticBody3D" parent="."]
+unique_name_in_owner = true

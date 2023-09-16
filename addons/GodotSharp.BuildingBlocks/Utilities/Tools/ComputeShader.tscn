@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c5mjhnctgyca5"]
+
+[ext_resource type="Script" path="res://addons/GodotSharp.BuildingBlocks/Utilities/Tools/ComputeShader.cs" id="1_8dam3"]
+
+[node name="ComputeShader" type="Node"]
+script = ExtResource("1_8dam3")

@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://b2pefy7nkss7d"]
+
+[ext_resource type="PackedScene" uid="uid://kwwhjneeqaqi" path="res://addons/GodotSharp.BuildingBlocks/Utilities/Tools/CustomMesh.tscn" id="1_epp8x"]
+[ext_resource type="Script" path="res://addons/GodotSharp.BuildingBlocks/Utilities/Tools/CustomPlane.cs" id="2_jderw"]
+
+[node name="Plane" instance=ExtResource("1_epp8x")]
+script = ExtResource("2_jderw")
+Size = 0
+Material = null

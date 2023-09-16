@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://b20k827nvovr1"]
+
+[ext_resource type="Script" path="res://addons/GodotSharp.BuildingBlocks/Utilities/Tools/CustomMultiMesh.cs" id="1_mfqfk"]
+
+[sub_resource type="MultiMesh" id="MultiMesh_dmvn1"]
+
+[node name="CustomMultiMesh" type="MultiMeshInstance3D"]
+cast_shadow = 0
+multimesh = SubResource("MultiMesh_dmvn1")
+script = ExtResource("1_mfqfk")

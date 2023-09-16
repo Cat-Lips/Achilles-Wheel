@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://qjqcbdhqk3r2"]
+
+[ext_resource type="Script" path="res://addons/GodotSharp.BuildingBlocks/Components/GameTools/3D/Player.cs" id="1_6w4tk"]
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_6w4tk")

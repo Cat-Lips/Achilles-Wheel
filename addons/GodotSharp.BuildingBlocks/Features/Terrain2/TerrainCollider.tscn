@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0y8hfs0nfh6j"]
+
+[ext_resource type="Script" path="res://addons/GodotSharp.BuildingBlocks/Features/Terrain2/TerrainCollider.cs" id="1_58d3x"]
+
+[sub_resource type="HeightMapShape3D" id="HeightMapShape3D_k70mk"]
+
+[node name="Collider" type="CollisionShape3D"]
+shape = SubResource("HeightMapShape3D_k70mk")
+script = ExtResource("1_58d3x")

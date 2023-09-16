@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dm8rp6omosmcr"]
+
+[ext_resource type="Script" path="res://addons/GodotSharp.BuildingBlocks/Features/Terrain1/Terrain.cs" id="1_cqiyt"]
+
+[node name="Terrain" type="Node"]
+script = ExtResource("1_cqiyt")

@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://bu2yj10xyf4w"]
+
+[ext_resource type="Script" path="res://addons/GodotSharp.BuildingBlocks/Features/Grass2/Wind.cs" id="1_w7mi0"]
+[ext_resource type="Material" uid="uid://ka2sdsbjfhpw" path="res://addons/GodotSharp.BuildingBlocks/Features/Grass2/Wind.tres" id="2_ftddq"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_d4yfl"]
+material = ExtResource("2_ftddq")
+size = Vector2(10, 10)
+
+[node name="Wind" type="Node"]
+script = ExtResource("1_w7mi0")
+
+[node name="Floor" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.789588, -0.000226498, -0.28432)
+mesh = SubResource("PlaneMesh_d4yfl")

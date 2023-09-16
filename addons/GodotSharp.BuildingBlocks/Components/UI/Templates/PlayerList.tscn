@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=3 uid="uid://cx6fpcxe7i2hx"]
+
+[ext_resource type="PackedScene" uid="uid://dpqt1v2u1bovf" path="res://addons/GodotSharp.BuildingBlocks/Components/UI/Root.tscn" id="1_2qj1e"]
+[ext_resource type="Script" path="res://addons/GodotSharp.BuildingBlocks/Components/UI/Templates/PlayerList.cs" id="2_t7vlq"]
+
+[node name="PlayerList" instance=ExtResource("1_2qj1e")]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_bottom = 0.0
+offset_left = -20.0
+offset_bottom = 20.0
+grow_horizontal = 0
+grow_vertical = 1
+script = ExtResource("2_t7vlq")
+AvatarAsImage = false
+
+[node name="Content" type="GridContainer" parent="Panel/Margin" index="0"]
+unique_name_in_owner = true
+layout_mode = 2
+columns = 5
+
+[node name="Player" type="Label" parent="Panel/Margin/Content" index="0"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Player"
+
+[node name="Sep1" type="VSeparator" parent="Panel/Margin/Content" index="1"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Avatar" type="Label" parent="Panel/Margin/Content" index="2"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Avatar"
+
+[node name="Sep2" type="VSeparator" parent="Panel/Margin/Content" index="3"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Score" type="Label" parent="Panel/Margin/Content" index="4"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Score"

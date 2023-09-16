@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://7j2hq7mclc4b"]
+
+[ext_resource type="Script" path="res://Game/Vehicles.cs" id="2_elhw6"]
+[ext_resource type="PackedScene" uid="uid://lk1ijq34diec" path="res://Assets/3D/Vehicles/styloolowpolycar_GLTF/carblack.glb" id="2_i4fyd"]
+
+[node name="Vehicles" type="Node"]
+script = ExtResource("2_elhw6")
+
+[node name="CarBlack" parent="." instance=ExtResource("2_i4fyd")]
+
+[editable path="CarBlack"]

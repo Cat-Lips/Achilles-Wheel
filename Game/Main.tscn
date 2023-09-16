@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=3 uid="uid://da6po66hyqwak"]
+
+[ext_resource type="PackedScene" uid="uid://cowdptmfvm858" path="res://addons/GodotSharp.BuildingBlocks/Components/Game3D.tscn" id="1_fxhld"]
+[ext_resource type="Script" path="res://Game/Main.cs" id="1_l1lff"]
+[ext_resource type="PackedScene" uid="uid://nph02o2j511h" path="res://addons/GodotSharp.BuildingBlocks/Features/Terrain2/Terrain.tscn" id="3_e8a6u"]
+[ext_resource type="PackedScene" uid="uid://7j2hq7mclc4b" path="res://Game/Vehicles.tscn" id="4_n3jnr"]
+[ext_resource type="PackedScene" uid="uid://di5psjjl01fk1" path="res://Game/MainPlayer.tscn" id="16_cryki"]
+
+[node name="World" instance=ExtResource("1_fxhld")]
+script = ExtResource("1_l1lff")
+
+[node name="Camera" parent="." index="2" node_paths=PackedStringArray("Target")]
+Target = NodePath("../MainPlayer")
+
+[node name="Terrain" parent="." index="5" node_paths=PackedStringArray("Camera", "Colliders") instance=ExtResource("3_e8a6u")]
+unique_name_in_owner = true
+Camera = NodePath("../Camera")
+Colliders = [NodePath("../MainPlayer")]
+
+[node name="Vehicles" parent="." index="6" instance=ExtResource("4_n3jnr")]
+unique_name_in_owner = true
+
+[node name="MainPlayer" parent="." index="7" instance=ExtResource("16_cryki")]
+unique_name_in_owner = true

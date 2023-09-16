@@ -1,0 +1,42 @@
+[gd_scene load_steps=10 format=3 uid="uid://cowdptmfvm858"]
+
+[ext_resource type="Script" path="res://addons/GodotSharp.BuildingBlocks/Components/Game3D.cs" id="1_yk855"]
+[ext_resource type="PackedScene" uid="uid://bpe37y468675m" path="res://addons/GodotSharp.BuildingBlocks/Components/GameTools/3D/Environment.tscn" id="2_fweeb"]
+[ext_resource type="PackedScene" uid="uid://diirptjau1mkv" path="res://addons/GodotSharp.BuildingBlocks/Components/Network/Network.tscn" id="3_58mf4"]
+[ext_resource type="PackedScene" uid="uid://qnsoaxnixlfw" path="res://addons/GodotSharp.BuildingBlocks/Components/GameTools/3D/Camera.tscn" id="3_onp0y"]
+[ext_resource type="PackedScene" uid="uid://cpnbdcfwynwxo" path="res://addons/GodotSharp.BuildingBlocks/Components/GameTools/MyInput.tscn" id="4_051f2"]
+[ext_resource type="PackedScene" uid="uid://bj1sgyr15iasp" path="res://addons/GodotSharp.BuildingBlocks/Components/UI/Templates/MainMenu.tscn" id="5_17vfy"]
+[ext_resource type="PackedScene" uid="uid://cx6fpcxe7i2hx" path="res://addons/GodotSharp.BuildingBlocks/Components/UI/Templates/PlayerList.tscn" id="6_butqn"]
+[ext_resource type="PackedScene" uid="uid://swng41nxv512" path="res://addons/GodotSharp.BuildingBlocks/Components/UI/Templates/QuickHelp.tscn" id="7_ywxau"]
+[ext_resource type="PackedScene" uid="uid://buuqtpmt8fm5e" path="res://addons/GodotSharp.BuildingBlocks/Components/UI/Templates/ValueWatcher.tscn" id="8_trhbe"]
+
+[node name="World" type="Node"]
+script = ExtResource("1_yk855")
+
+[node name="Environment" parent="." instance=ExtResource("2_fweeb")]
+
+[node name="Network" parent="." instance=ExtResource("3_58mf4")]
+unique_name_in_owner = true
+
+[node name="Camera" parent="." instance=ExtResource("3_onp0y")]
+unique_name_in_owner = true
+
+[node name="Input" parent="." instance=ExtResource("4_051f2")]
+
+[node name="UI" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+
+[node name="MainMenu" parent="UI" instance=ExtResource("5_17vfy")]
+unique_name_in_owner = true
+
+[node name="PlayerList" parent="UI" instance=ExtResource("6_butqn")]
+unique_name_in_owner = true
+visible = false
+
+[node name="QuickHelp" parent="UI" instance=ExtResource("7_ywxau")]
+unique_name_in_owner = true
+visible = false
+
+[node name="ValueWatcher" parent="UI" instance=ExtResource("8_trhbe")]
+unique_name_in_owner = true
+visible = false

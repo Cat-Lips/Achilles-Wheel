@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bl5bx08xib54q"]
+
+[ext_resource type="PackedScene" uid="uid://b2pefy7nkss7d" path="res://addons/GodotSharp.BuildingBlocks/Utilities/Tools/CustomPlane.tscn" id="1_0twnl"]
+[ext_resource type="Script" path="res://addons/GodotSharp.BuildingBlocks/Features/Terrain2/TerrainChunk.cs" id="2_vec75"]
+
+[node name="Chunk" instance=ExtResource("1_0twnl")]
+script = ExtResource("2_vec75")
+Size = 0
+Material = null

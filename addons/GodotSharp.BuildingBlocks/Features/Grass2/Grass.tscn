@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dqcv3dqhs87wr"]
+
+[ext_resource type="Script" path="res://addons/GodotSharp.BuildingBlocks/Features/Grass2/Grass.cs" id="1_bxtb4"]
+
+[node name="Grass" type="MultiMeshInstance3D"]
+cast_shadow = 0
+script = ExtResource("1_bxtb4")
+Count = 20000

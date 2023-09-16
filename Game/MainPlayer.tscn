@@ -1,0 +1,20 @@
+[gd_scene load_steps=6 format=3 uid="uid://di5psjjl01fk1"]
+
+[ext_resource type="PackedScene" uid="uid://qjqcbdhqk3r2" path="res://addons/GodotSharp.BuildingBlocks/Components/GameTools/3D/Player.tscn" id="1_pc4c5"]
+[ext_resource type="Script" path="res://Game/MainPlayer.cs" id="2_u1uyt"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_mv8kv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sonpe"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_frfpl"]
+material = SubResource("StandardMaterial3D_sonpe")
+
+[node name="MainPlayer" instance=ExtResource("1_pc4c5")]
+script = ExtResource("2_u1uyt")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="0"]
+shape = SubResource("CapsuleShape3D_mv8kv")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." index="1"]
+mesh = SubResource("CapsuleMesh_frfpl")

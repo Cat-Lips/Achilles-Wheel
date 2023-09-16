@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://dt8cy7t0kapbl"]
+
+[ext_resource type="Shader" path="res://addons/GodotSharp.BuildingBlocks/Features/Grass/Grass.gdshader" id="1_1xjck"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_1xjck")
+shader_parameter/color_base = Color(0.11, 0.251, 0.039, 1)
+shader_parameter/color_tip = Color(0.227, 0.592, 0.067, 1)
+shader_parameter/noise_scale = 20.0
